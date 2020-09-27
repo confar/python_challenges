@@ -1,3 +1,4 @@
+
 def multiply_matrices(a, b):
     multiplied_matrix = [[0 for _ in range(len(a))] for _ in range(len(b[0]))]
     for i in range(len(a)):
