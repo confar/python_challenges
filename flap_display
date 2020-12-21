@@ -1,0 +1,17 @@
+ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ?!@#&()|<>.:=-+*/0123456789'
+
+def flap_display(lines, rotors):
+    total_result = []
+    for line, rotor in zip(lines, rotors):
+        line_result = []
+        while rotor > len(ALPHABET):
+            rotor -= len(ALPHABET)
+        for i, value in enumerate(rotor):
+            trans = str.maketrans(ALPHABET, ALPHABET[value:] + ALPHABET[:value], '')
+            line = line.translate(trans)
+            letter = line[i]
+            line_result.append(letter)
+        total_result.append(''.join(line_result))
+    return total_result
+
+flap_display(['IN SPACE NOBODY...  '], [[48, 47, 0, 21, 38, 120, 48, 15, 41, 11, 43, 19, 47, 3, 17, 2, 41, 50, 23, 16]])
