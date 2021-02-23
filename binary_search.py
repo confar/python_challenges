@@ -1,5 +1,3 @@
-
-
 def recursive_search(lst, num):
     lst_len = len(lst)
     if not lst_len:
