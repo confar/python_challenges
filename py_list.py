@@ -65,11 +65,14 @@ class Array:
     def show(self):
         return self.values[:self.size]
 
-    def remove(self, item):
-        index_to_remove = self.index(item)
-        self.values[index_to_remove] = None
-        for i, value in enumerate(self.values[index_to_remove:]):
-            self.values[i-1] = value
+    def remove(self, index):
+        if index < 0 or index > self.size:
+            raise IndexError()
+        if index < self.size - 1:
+            for i in range(index, self.size-1):
+                self.values[i] = self.values[i+1]
+            self.values[self.size-1] = None
+        self.size -= 1
 
     def clear(self):
         """ Remove all items from list. """
@@ -118,3 +121,9 @@ if __name__ == '__main__':
     lst.append(5)
     assert lst[2] == 5
     assert lst.show() == [1, 3, 5]
+    lst.remove(1)
+    assert lst.show() == [1, 5]
+    lst.remove(1)
+    assert lst.show() == [1]
+    lst.remove(0)
+    assert lst.show() == []
