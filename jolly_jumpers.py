@@ -33,6 +33,5 @@ def is_jolly(lst):
     return 'Not jolly'
 
 
-
 lst = list(map(int, input().split(' ')))
 print(is_jolly(lst))

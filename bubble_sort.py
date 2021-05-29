@@ -37,7 +37,13 @@ def bubble_sort_optimized(arr):
 assert bubble_sort(arr) == [1, 3, 4, 5, 7, 8]
 assert bubble_sort(arr2) == [1, 2, 3]
 assert bubble_sort(arr3) == [1, 2, 3, 4, 5, 6, 7, 8, 9]
+assert bubble_sort([1]) == [1]
+assert bubble_sort([1, 2]) == [1, 2]
+assert bubble_sort([]) == []
 
 assert bubble_sort_optimized(arr) == [1, 3, 4, 5, 7, 8]
 assert bubble_sort_optimized(arr2) == [1, 2, 3]
 assert bubble_sort_optimized(arr3) == [1, 2, 3, 4, 5, 6, 7, 8, 9]
+assert bubble_sort_optimized([1]) == [1]
+assert bubble_sort_optimized([1, 2]) == [1, 2]
+assert bubble_sort_optimized([]) == []
