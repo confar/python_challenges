@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 s1 = 'AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBB'
-lenght = len(s1)
+length = len(s1)
 
 
 @dataclass

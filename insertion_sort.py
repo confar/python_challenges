@@ -4,9 +4,9 @@ arr3 = [9, 8, 7, 6, 5, 4, 3, 2, 1]
 
 
 def insertion_sort(arr):
-    lenght = len(arr)
+    length = len(arr)
     i = 1
-    while i < lenght:
+    while i < length:
         j = i
         while j > 0 and arr[j-1] > arr[j]:
             arr[j-1], arr[j] = arr[j], arr[j-1]
