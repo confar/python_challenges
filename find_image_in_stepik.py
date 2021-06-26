@@ -11,6 +11,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 path = './chromedriver'
 driver = webdriver.Chrome(executable_path=path)
 driver.get('https://stepik.org/lesson/4763/step/7?unit=1065')
+
+
 steps = [
     ("/html/body/div/div[1]/div[2]/main/div[1]/div[2]/div/div[2]/div[1]/"
      "div/article/div/div/div[2]/div/section/div/div[1]/div/button", 40, 'click', None, False, 0),
