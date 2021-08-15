@@ -8,11 +8,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
-path = './chromedriver'
-driver = webdriver.Chrome(executable_path=path)
+CHROMEDRIVER_PATH = './chromedriver'
+
+driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH)
+
 driver.get('https://stepik.org/lesson/4763/step/7?unit=1065')
-
-
 steps = [
     ("/html/body/div/div[1]/div[2]/main/div[1]/div[2]/div/div[2]/div[1]/"
      "div/article/div/div/div[2]/div/section/div/div[1]/div/button", 40, 'click', None, False, 0),
